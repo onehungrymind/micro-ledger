@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Feature (Microfrontend)</h2>
+  <p>
+    This feature component is being remotely loaded into the application using
+    Module Federation. Angular is shared so the download is minimal for the
+    frontend.
+  </p>
+  <ohm-module-outlet
+    class="cell-wrapper"
+    [ngClass]="{ unHealthy: !cell.healthy }"
+    [cell]="cell"
+  ></ohm-module-outlet>
+</div>

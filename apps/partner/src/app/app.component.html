@@ -1,0 +1,12 @@
+<ohm-toolbar (logout)="logout()" (toggleSidenav)="sidenav.toggle()">
+</ohm-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [opened]="false" mode="side" class="app-sidenav">
+    <ng-container> </ng-container>
+  </mat-sidenav>
+
+  <mat-card class="container">
+    <ohm-feature></ohm-feature>
+  </mat-card>
+</mat-sidenav-container>

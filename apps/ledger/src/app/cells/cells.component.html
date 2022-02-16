@@ -1,0 +1,18 @@
+<div class="component-container">
+  <div class="list-component">
+    <ohm-cells-list
+      [cells]="allCells$ | async"
+      (selected)="selectCell($event)"
+      (deleted)="deleteCell($event)"
+    >
+    </ohm-cells-list>
+  </div>
+  <div class="details-component">
+    <ohm-cell-details
+      [cell]="selectedCell$ | async"
+      (saved)="saveCell($event)"
+      (cancelled)="resetForm()"
+    >
+    </ohm-cell-details>
+  </div>
+</div>

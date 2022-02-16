@@ -1,0 +1,42 @@
+<div class="container">
+  <mat-card-title>
+    <span>
+      Primary (Microfrontend)
+    </span>
+  </mat-card-title>
+  <form>
+    <mat-card-content>
+      <p>
+        This primary component is being remotely loaded into the application using
+        Module Federation. Angular is shared so the download is minimal for the
+        frontend.
+      </p>
+
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter a title"
+          type="input"
+          name="title"
+          required="true"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Enter a type"
+          type="input"
+          name="type"
+          required="true"
+        />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="submit" mat-button color="primary">Save</button>
+      <button type="button" mat-button>
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</div>

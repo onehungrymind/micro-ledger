@@ -1,0 +1,89 @@
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="originalTitle; else elseBlock">
+      Editing {{ originalTitle }}
+    </span>
+    <ng-template #elseBlock>
+      Select a Module
+    </ng-template>
+  </mat-card-title>
+  <form #form="ngForm" [formGroup]="cellForm" (submit)="save(form)">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Title"
+          formControlName="title"
+          type="text"
+          name="title"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Description"
+          formControlName="description"
+          type="text"
+          name="description"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="URI"
+          formControlName="uri"
+          type="text"
+          name="uri"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Component Name"
+          formControlName="componentName"
+          type="text"
+          name="componentName"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Remote Name"
+          formControlName="remoteName"
+          type="text"
+          name="remoteName"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="Module"
+          formControlName="module"
+          type="text"
+          name="module"
+        />
+      </mat-form-field>
+
+      <section>
+        <mat-checkbox formControlName="published">Published</mat-checkbox>
+      </section>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        [disabled]="form.invalid"
+        type="submit"
+        mat-button
+        color="primary"
+      >
+        Save
+      </button>
+      <button
+        type="button"
+        mat-button
+        (click)="form.resetForm(); cancelled.emit()"
+      >
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
