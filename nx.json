@@ -22,51 +22,62 @@
       }
     }
   },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "generators": {
-    "@nrwl/workspace": {
-      "library": {
-        "linter": "tslint"
-      }
+  "projects": {
+    "ledger": {
+      "tags": []
     },
-    "@nrwl/cypress": {
-      "cypress-project": {
-        "linter": "tslint"
-      }
+    "ledger-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ledger"]
     },
-    "@nrwl/node": {
-      "application": {
-        "linter": "tslint"
-      },
-      "library": {
-        "linter": "tslint"
-      }
+    "api": {
+      "tags": []
     },
-    "@nrwl/nest": {
-      "application": {
-        "linter": "tslint"
-      },
-      "library": {
-        "linter": "tslint"
-      }
+    "api-interfaces": {
+      "tags": []
     },
-    "@nrwl/express": {
-      "application": {
-        "linter": "tslint"
-      },
-      "library": {
-        "linter": "tslint"
-      }
+    "dashboard": {
+      "tags": []
     },
-    "@nrwl/angular:application": {
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
+    "dashboard-e2e": {
+      "tags": [],
+      "implicitDependencies": ["dashboard"]
     },
-    "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
+    "primary": {
+      "tags": []
+    },
+    "primary-e2e": {
+      "tags": [],
+      "implicitDependencies": ["primary"]
+    },
+    "secondary": {
+      "tags": []
+    },
+    "secondary-e2e": {
+      "tags": [],
+      "implicitDependencies": ["secondary"]
+    },
+    "core-data": {
+      "tags": []
+    },
+    "core-state": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
+    },
+    "ui-toolbar": {
+      "tags": []
+    },
+    "module-outlet": {
+      "tags": []
+    },
+    "partner": {
+      "tags": []
+    },
+    "partner-e2e": {
+      "tags": [],
+      "implicitDependencies": ["partner"]
     }
-  },
-  "defaultProject": "ledger"
+  }
 }
