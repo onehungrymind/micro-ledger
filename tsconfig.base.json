@@ -21,8 +21,8 @@
       "@ohm/core-data": ["libs/core-data/src/index.ts"],
       "@ohm/core-state": ["libs/core-state/src/index.ts"],
       "@ohm/material": ["libs/material/src/index.ts"],
-      "@ohm/ui-toolbar": ["libs/ui-toolbar/src/index.ts"],
-      "@ohm/module-outlet": ["libs/module-outlet/src/index.ts"]
+      "@ohm/module-outlet": ["libs/module-outlet/src/index.ts"],
+      "@ohm/ui-toolbar": ["libs/ui-toolbar/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
