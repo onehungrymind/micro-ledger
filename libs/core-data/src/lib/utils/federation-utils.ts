@@ -16,7 +16,7 @@ const moduleMap = {};
 export function loadRemoteEntry(remoteEntry: string): Promise<void> {
   return new Promise<any>((resolve, reject) => {
     if (moduleMap[remoteEntry]) {
-      resolve();
+      resolve({});
       return;
     }
 
@@ -27,7 +27,7 @@ export function loadRemoteEntry(remoteEntry: string): Promise<void> {
 
     script.onload = () => {
       moduleMap[remoteEntry] = true;
-      resolve();
+      resolve({});
     };
 
     document.body.append(script);
